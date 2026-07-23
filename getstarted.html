@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Services | AccStation</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+font-family:Inter,sans-serif;
+color:#17324d;
+background:
+radial-gradient(circle at 15% 15%, rgba(37,99,235,.12), transparent 25%),
+radial-gradient(circle at 85% 20%, rgba(96,165,250,.10), transparent 28%),
+linear-gradient(180deg,#fff 0%,#f7fbff 45%,#eef6ff 100%);
+}
+.container{width:min(1180px,92%);margin:auto}
+header{position:sticky;top:0;background:rgba(255,255,255,.9);backdrop-filter:blur(10px);border-bottom:1px solid #e7eef8}
+nav{display:flex;justify-content:space-between;align-items:center;height:80px}
+.logo{font-size:30px;font-weight:800;color:#2563eb}
+.logo span{color:#7ab3ff}
+.menu{display:flex;gap:30px}
+.menu a{text-decoration:none;color:#456;font-weight:600}
+.hero{text-align:center;padding:90px 0 70px}
+.badge{display:inline-block;background:#e9f2ff;color:#2563eb;padding:10px 18px;border-radius:30px;font-size:14px;font-weight:600}
+h1{font-size:64px;margin:20px 0}
+.hero p{max-width:720px;margin:auto;font-size:20px;color:#667b92;line-height:1.8}
+.btn{display:inline-block;margin-top:35px;padding:16px 34px;border-radius:14px;background:linear-gradient(135deg,#3b82f6,#2563eb);color:#fff;text-decoration:none;font-weight:700}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:28px;margin:60px 0 100px}
+.card{height:450px;perspective:1200px}
+.card-inner{position:relative;width:100%;height:100%;transform-style:preserve-3d;transition:transform .75s}
+.card:hover .card-inner,.card.flipped .card-inner{transform:rotateY(180deg)}
+.card-front,.card-back{
+position:absolute;inset:0;background:#fff;border-radius:24px;padding:32px;
+box-shadow:0 12px 35px rgba(26,65,120,.08);
+backface-visibility:hidden;display:flex;flex-direction:column
+}
+.card-front{transition:.25s}
+.card:hover .card-front{transform:translateY(-8px)}
+.card-back{transform:rotateY(180deg);background:#fff;color:#17324d}
+.icon{width:58px;height:58px;border-radius:16px;background:#edf5ff;display:flex;align-items:center;justify-content:center;margin-bottom:18px}
+.icon img{width:34px;height:34px}
+.card-back .icon{background:#edf5ff;border:1px solid #dbeafe}
+.card-back .icon img{filter:none}
+.card h3{font-size:28px}
+.sub{color:#6b8098;margin:8px 0 20px}
+.card-back .sub,.card-back li,.card-back h3,.card-back .small{color:#456}
+ul{list-style:none}
+li{padding:7px 0;color:#456}
+.price{margin:28px 0}
+.small{font-size:14px;color:#7d8ea2}
+.big{font-size:36px;font-weight:800;color:#2563eb}
+.flip{margin-top:auto;text-align:center;color:#8aa0b8;font-size:13px}
+.order{display:block;text-align:center;padding:14px;border-radius:12px;background:#2563eb;color:#fff;text-decoration:none;font-weight:700;margin-top:auto}
+.card-back .order{background:#2563eb;color:#fff}
+section.info{background:#fff;border-radius:30px;padding:60px;box-shadow:0 12px 35px rgba(26,65,120,.08);margin-bottom:60px}
+section.info h2{text-align:center;font-size:42px;margin-bottom:40px}
+.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+.feature{background:#f8fbff;padding:22px;border-radius:18px;font-weight:600}
+.cta{background:linear-gradient(135deg,#2563eb,#4f9cff);color:#fff;text-align:center;padding:70px;border-radius:30px;margin:70px 0}
+.cta h2{font-size:42px;margin-bottom:16px}
+.cta p{max-width:650px;margin:auto;line-height:1.8;margin-bottom:30px}
+.cta a{display:inline-block;background:#fff;color:#2563eb;text-decoration:none;padding:16px 34px;border-radius:14px;font-weight:700}
+
+.card-divider{
+margin:18px 0 20px;
+height:1px;
+background:linear-gradient(to right,transparent,#dbe7f5,transparent);
+}
+
+footer{text-align:center;padding:45px;color:#789}
+@media(max-width:768px){h1{font-size:44px}nav{flex-direction:column;height:auto;padding:20px 0}.menu{flex-wrap:wrap;justify-content:center}section.info{padding:35px}.cta{padding:40px 25px}}
+</style>
+</head><body>
+<header><div class="container"><nav><div class="logo">Acc<span>Station</span></div><div class="menu"><a href="index.html">Home</a><a href="contacts.html">Contacts</a><a href="faq.html">FAQ</a></div></nav></div></header>
+<div class="container">
+<section class="hero"><div class="badge">Professional Account Services</div><h1>Our Services</h1><p>Choose the account that fits your needs. Every account is individually created and prepared for immediate use.</p><a class="btn" href="contacts.html">Contact Us</a></section>
+<div class="grid">
+<div class="card"><div class="card-inner">
+<div class="card-front">
+<div class="icon"><img src="https://cdn.simpleicons.org/google"></div>
+<h3>Google Account</h3><div class="sub">Fresh Registration</div><ul><li>✔ Phone Verified</li><li>✔ Use Google to sign in</li><li>✔ Custom Username</li><li>✔ Google Premium Available (Optional)</li></ul><div class="price"><div class="small">Starting from</div><div class="big">€35.99</div></div><div class="flip">↻ Hover or tap to flip</div></div>
+<div class="card-back"><div class="icon"><img src="https://cdn.simpleicons.org/google"></div><h3>Google Account</h3><div class="sub">Included Services</div><ul><li>• Gmail</li><li>• YouTube</li><li>• Drive</li><li>• Photos</li><li>• Docs</li><li>• Play</li></ul><div class="card-divider"></div><a class="order" href="contacts.html">Order Now</a></div></div></div><div class="card"><div class="card-inner">
+<div class="card-front">
+<div class="icon"><img src="https://cdn.simpleicons.org/instagram"></div>
+<h3>Instagram Account</h3><div class="sub">Fresh Registration</div><ul><li>✔ Phone Verified</li><li>✔ Ready for Posts & Ads</li><li>✔ Custom Username</li><li>✔ Meta Verified Available</li></ul><div class="price"><div class="small">Starting from</div><div class="big">€27.99</div></div><div class="flip">↻ Hover or tap to flip</div></div>
+<div class="card-back"><div class="icon"><img src="https://cdn.simpleicons.org/instagram"></div><h3>Instagram Account</h3><div class="sub">Included Services</div><ul><li>• Feed</li><li>• Stories</li><li>• Reels</li><li>• Direct</li><li>• Threads</li><li>• Business</li></ul><div class="card-divider"></div><a class="order" href="contacts.html">Order Now</a></div></div></div><div class="card"><div class="card-inner">
+<div class="card-front">
+<div class="icon"><img src="https://cdn.simpleicons.org/tiktok"></div>
+<h3>TikTok Account</h3><div class="sub">Fresh Registration</div><ul><li>✔ Phone Verified</li><li>✔ Optimized for Growth</li><li>✔ Business Features</li><li>✔ Ready to Use</li></ul><div class="price"><div class="small">Starting from</div><div class="big">€25.99</div></div><div class="flip">↻ Hover or tap to flip</div></div>
+<div class="card-back"><div class="icon"><img src="https://cdn.simpleicons.org/tiktok"></div><h3>TikTok Account</h3><div class="sub">Included Services</div><ul><li>• Feed</li><li>• Upload</li><li>• Live</li><li>• Shop</li><li>• Creator Tools</li><li>• Favorites</li></ul><div class="card-divider"></div><a class="order" href="contacts.html">Order Now</a></div></div></div><div class="card"><div class="card-inner">
+<div class="card-front">
+<div class="icon"><img src="https://cdn.simpleicons.org/telegram"></div>
+<h3>Telegram Account</h3><div class="sub">Fresh Registration</div><ul><li>✔ Phone Verified</li><li>✔ Join Groups Instantly</li><li>✔ Create Bots & Channels</li><li>✔ Telegram Premium Available</li></ul><div class="price"><div class="small">Starting from</div><div class="big">€25.99</div></div><div class="flip">↻ Hover or tap to flip</div></div>
+<div class="card-back"><div class="icon"><img src="https://cdn.simpleicons.org/telegram"></div><h3>Telegram Account</h3><div class="sub">Included Services</div><ul><li>• Chats</li><li>• Groups</li><li>• Channels</li><li>• Bots</li><li>• Mini Apps</li><li>• Calls</li></ul><div class="card-divider"></div><a class="order" href="contacts.html">Order Now</a></div></div></div><div class="card"><div class="card-inner">
+<div class="card-front">
+<div class="icon"><img src="https://cdn.simpleicons.org/facebook"></div>
+<h3>Facebook Account</h3><div class="sub">Fresh Registration</div><ul><li>✔ Phone Verified</li><li>✔ Access Pages & Groups</li><li>✔ Ready for Meta Suite</li><li>✔ Meta Verified Available</li></ul><div class="price"><div class="small">Starting from</div><div class="big">€28.99</div></div><div class="flip">↻ Hover or tap to flip</div></div>
+<div class="card-back"><div class="icon"><img src="https://cdn.simpleicons.org/facebook"></div><h3>Facebook Account</h3><div class="sub">Included Services</div><ul><li>• Feed</li><li>• Messenger</li><li>• Marketplace</li><li>• Groups</li><li>• Pages</li><li>• Events</li></ul><div class="card-divider"></div><a class="order" href="contacts.html">Order Now</a></div></div></div><div class="card"><div class="card-inner">
+<div class="card-front">
+<div class="icon"><img src="https://cdn.simpleicons.org/x"></div>
+<h3>X Account</h3><div class="sub">Fresh Registration</div><ul><li>✔ Phone Verified</li><li>✔ Personal & Brand Ready</li><li>✔ Works with X Ads</li><li>✔ X Premium Available</li></ul><div class="price"><div class="small">Starting from</div><div class="big">€27.99</div></div><div class="flip">↻ Hover or tap to flip</div></div>
+<div class="card-back"><div class="icon"><img src="https://cdn.simpleicons.org/x"></div><h3>X Account</h3><div class="sub">Included Services</div><ul><li>• Posts</li><li>• Replies</li><li>• Communities</li><li>• Spaces</li><li>• Messages</li><li>• Premium</li></ul><div class="card-divider"></div><a class="order" href="contacts.html">Order Now</a></div></div></div>
+</div>
+<section class="info"><h2>What's Included</h2><div class="features">
+<div class="feature">✔ Available accounts for all major social media platforms</div><div class="feature">✔ We handle KYC verification for you</div><div class="feature">✔ Premium Accounts</div><div class="feature">✔ SMS verification and physical SIM numbers included</div><div class="feature">✔ Assistance with repeated KYC verification</div><div class="feature">✔ Safe, Secure & Anonymous</div><div class="feature">✔ 24/7 support via anonymous chat</div><div class="feature">✔ We accept cryptocurrency only</div>
+</div></section>
+<section class="cta"><h2>Additional Services</h2><p>If you couldn't find the service you were looking for, need more information, or have any special requests, feel free to contact us directly. We'll be happy to answer your questions, discuss the details, and help you find the best solution.
+</p><a href="contacts.html">Contact Us</a></section>
+</div>
+<footer>© 2026 AccStation • Home • Price • Contacts • FAQ</footer>
+<script>
+document.querySelectorAll('.card').forEach(card=>{
+ card.addEventListener('click',e=>{
+   if(window.innerWidth<=992){card.classList.toggle('flipped');}
+ });
+});
+</script>
+</body></html>

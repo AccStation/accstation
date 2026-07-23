@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AccStation | FAQ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Inter,sans-serif;color:#17324d;background:
+radial-gradient(circle at 15% 15%,rgba(37,99,235,.12),transparent 25%),
+radial-gradient(circle at 85% 20%,rgba(96,165,250,.10),transparent 28%),
+linear-gradient(180deg,#fff,#f7fbff 45%,#eef6ff)}
+.container{width:min(1000px,92%);margin:auto}
+header{position:sticky;top:0;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid #e8eef8}
+nav{display:flex;justify-content:space-between;align-items:center;height:80px}
+.logo{font-size:30px;font-weight:800;color:#2563eb}.logo span{color:#7ab3ff}
+.menu{display:flex;gap:30px}.menu a{text-decoration:none;color:#456;font-weight:600}
+.hero{text-align:center;padding:90px 0 60px}
+.badge{display:inline-block;padding:10px 18px;border-radius:30px;background:#e9f2ff;color:#2563eb;font-weight:600}
+h1{font-size:58px;margin:18px 0}
+.hero p{max-width:650px;margin:auto;color:#6d8198;font-size:20px;line-height:1.8}
+.faq{margin:20px 0 70px}
+.item{background:#fff;border-radius:24px;margin-bottom:18px;box-shadow:0 12px 35px rgba(26,65,120,.08);overflow:hidden;transition:.25s}
+.item:hover{transform:translateY(-4px)}
+.question{display:flex;justify-content:space-between;align-items:center;padding:26px 30px;cursor:pointer;font-weight:700;font-size:20px}
+.icon{font-size:34px;color:#2563eb;transition:.3s}
+.answer{max-height:0;overflow:hidden;transition:max-height .35s ease,padding .35s ease;padding:0 30px;color:#667b92;line-height:1.8}
+.item.active .answer{max-height:220px;padding:0 30px 28px}
+.item.active .icon{transform:rotate(45deg)}
+.cta{margin:80px 0;background:#fff;border-radius:30px;padding:60px;text-align:center;box-shadow:0 12px 35px rgba(26,65,120,.08)}
+.cta h2{font-size:40px;margin-bottom:15px}
+.cta p{color:#6d8198;margin-bottom:30px}
+.btn{display:inline-block;background:#2563eb;color:#fff;text-decoration:none;padding:16px 28px;border-radius:14px;font-weight:700}
+footer{text-align:center;padding:45px;color:#789}
+@media(max-width:768px){nav{flex-direction:column;height:auto;padding:20px 0}.menu{flex-wrap:wrap}h1{font-size:42px}.question{font-size:18px}}
+</style>
+</head>
+<body>
+
+<header>
+<div class="container">
+<nav>
+<div class="logo">Acc<span>Station</span></div>
+<div class="menu">
+<a href="index.html">Home</a>
+<a href="contacts.html">Contacts</a>
+<a href="faq.html">FAQ</a>
+</div>
+</nav>
+</div>
+</header>
+
+<div class="container">
+<section class="hero">
+<div class="badge">Help Center</div>
+<h1>Frequently Asked Questions</h1>
+<p>Everything you need to know before placing an order.</p>
+</section>
+
+<div class="faq">
+</div>
+
+<section class="cta">
+<h2>Still have questions?</h2>
+<p>Can't find the answer you're looking for? Our support team is ready to help.</p>
+<a class="btn" href="contacts.html">Contact Us</a>
+</section>
+
+</div>
+
+<footer>© 2026 AccStation • Home • Contacts • FAQ</footer>
+
+<script>
+const data=[
+["What is AccStation?","AccStation is a service for creating and providing new social media accounts. We offer European accounts with verification using real SIM cards, confirmed age 16+, and the ability to complete KYC."],
+["Which social networks do you work with?","We support all major platforms: Google (Gmail, YouTube, and other services), Instagram, TikTok, Telegram, Facebook, X (Twitter), and many others. If the platform you need is not listed, contact us and we will consider your request."],
+["What is included in a ready account?","Each account is created individually and includes: Phone verification (real European SIM card), Age confirmation 16+ (with additional payment), Option to specify your desired username, Full access to all platform features (posts, advertising, business tools, Premium, etc.) "],
+["How does KYC and age verification work?","We use physical European SIM cards and data. If necessary, our specialists help pass additional checks, including providing photos and identity confirmation."],
+["How long does it take to create and deliver an account?","Usually from 3 minutes to 24 hours after payment. For large orders or complex verification, the time may increase up to 48 hours. We always inform you of the approximate time."],
+["What payment methods are accepted?","We accept only cryptocurrency to ensure security and transaction anonymity."],
+["Can I order an account with a specific username?","Yes. When placing an order, specify the desired login, and we will try to register it."],
+["What happens if the account is blocked?","We provide a 30-day guarantee on the account. In case of blocking due to our fault (not related to the client's actions), we will provide a free replacement."],
+["Do you provide support after purchase?","Yes, support is available 24/7. We help with access issues, account setup, password changes, and general usage recommendations."],
+["Is a refund possible?","A refund is possible only before the ready account details are sent. Once the login and password are received, refunds are not provided."],
+["What should I do after receiving the account?","We recommend changing the password immediately and saving the data in a safe place. It is not recommended to enable two-factor authentication on the number we provided unless necessary."],
+["Do you ask about the purposes of using the accounts?","No. We do not request information about your location or the purposes of use. We simply create accounts and transfer them to the client."],
+["How secure is the service?","Your data is not stored (except for the physical SIM card with the service) longer than necessary for delivery. All responsibility for further use of the accounts lies with the client."],
+["Can I order accounts in bulk (10, 50, 100 pieces)?","Yes. Special conditions and discounts apply for large orders. Contact us for an individual calculation."],
+];
+const wrap=document.querySelector('.faq');
+data.forEach((f,i)=>{
+const d=document.createElement('div');
+d.className='item';
+d.innerHTML=`<div class="question">${f[0]}<span class="icon">+</span></div><div class="answer">${f[1]}</div>`;
+wrap.appendChild(d);
+});
+document.querySelectorAll('.question').forEach(q=>{
+q.onclick=()=>{
+const item=q.parentElement;
+document.querySelectorAll('.item').forEach(i=>{if(i!==item)i.classList.remove('active');});
+item.classList.toggle('active');
+};
+});
+</script>
+
+</body>
+</html>
