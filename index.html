@@ -54,8 +54,22 @@ footer{background:#0f172a;color:#cbd5e1;padding:40px 0;text-align:center}
 h1{font-size:48px}
 }
 @media (max-width:640px){
-nav{justify-content:center;height:auto;padding:18px 0}
-.menu{display:none}
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+height:72px;
+padding:0;
+}
+.logo{font-size:24px}
+.menu{
+display:flex;
+gap:12px;
+}
+.menu a{
+font-size:14px;
+font-weight:600;
+}
 .hero{padding:50px 0}
 .visual{width:320px}
 .card{width:78px;height:78px;border-radius:22px;margin-left:-39px;margin-top:-39px}
