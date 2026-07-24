@@ -4,91 +4,392 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>AccStation | Contacts</title>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{font-family:Inter,sans-serif;color:#17324d;background:
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:Inter,sans-serif;
+color:#17324d;
+background:
 radial-gradient(circle at 15% 15%,rgba(37,99,235,.12),transparent 25%),
 radial-gradient(circle at 85% 20%,rgba(96,165,250,.10),transparent 28%),
-linear-gradient(180deg,#fff,#f7fbff 45%,#eef6ff)}
-.container{width:min(1180px,92%);margin:auto}
-header{position:sticky;top:0;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid #e7eef8}
-nav{display:flex;justify-content:space-between;align-items:center;height:80px}
-.logo{font-size:30px;font-weight:800;color:#2563eb}.logo span{color:#7ab3ff}
-.menu{display:flex;gap:30px}.menu a{text-decoration:none;color:#456;font-weight:600}
-.hero{text-align:center;padding:90px 0 60px}
-.badge{display:inline-block;background:#e9f2ff;color:#2563eb;padding:10px 18px;border-radius:30px;font-weight:600}
-h1{font-size:60px;margin:20px 0}
-.hero p{max-width:700px;margin:auto;color:#667b92;font-size:20px;line-height:1.8}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:28px;margin:60px 0}
-.card{display:block;text-decoration:none;color:inherit;background:#fff;border-radius:24px;padding:32px;box-shadow:0 12px 35px rgba(26,65,120,.08);transition:.25s;border:1px solid transparent}
-.card:hover{transform:translateY(-8px);border-color:#d8e7ff}
-.icon{width:60px;height:60px;border-radius:18px;background:#edf5ff;display:flex;align-items:center;justify-content:center;margin-bottom:20px}
-.icon img{width:34px;height:34px}
-.card h3{font-size:28px;margin-bottom:8px}
-.card .sub{color:#7b8ea3;font-size:15px;margin-bottom:22px}
-.card .value{font-size:22px;font-weight:700;color:#2563eb;word-break:break-word}
-.section{background:#fff;border-radius:30px;padding:60px;box-shadow:0 12px 35px rgba(26,65,120,.08);margin:70px 0}
-.section h2{text-align:center;font-size:40px;margin-bottom:35px}
-.template{background:#f8fbff;border-radius:18px;padding:26px;white-space:pre-line;line-height:2;font-size:17px}
-footer{text-align:center;padding:45px;color:#789}
-@media(max-width:768px){nav{flex-direction:column;height:auto;padding:20px 0}.menu{flex-wrap:wrap}h1{font-size:42px}}
+linear-gradient(180deg,#fff,#f7fbff 45%,#eef6ff);
+overflow-x:hidden;
+}
+
+.container{
+width:min(1180px,92%);
+margin:auto;
+}
+
+header{
+position:sticky;
+top:0;
+z-index:100;
+background:rgba(255,255,255,.92);
+backdrop-filter:blur(12px);
+border-bottom:1px solid #e7eef8;
+}
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+height:82px;
+}
+
+.logo{
+font-size:30px;
+font-weight:800;
+color:#2563eb;
+}
+
+.logo span{
+color:#7ab3ff;
+}
+
+.menu{
+display:flex;
+gap:30px;
+}
+
+.menu a{
+text-decoration:none;
+color:#456;
+font-weight:600;
+transition:.25s;
+}
+
+.menu a:hover{
+color:#2563eb;
+}
+
+.hero{
+text-align:center;
+padding:90px 0 60px;
+}
+
+.badge{
+display:inline-block;
+background:#e9f2ff;
+color:#2563eb;
+padding:10px 18px;
+border-radius:30px;
+font-weight:600;
+}
+
+h1{
+font-size:60px;
+margin:20px 0;
+}
+
+.hero p{
+max-width:720px;
+margin:auto;
+font-size:20px;
+line-height:1.8;
+color:#667b92;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:28px;
+margin:60px 0 80px;
+}
+
+.card{
+display:block;
+text-decoration:none;
+color:inherit;
+background:#fff;
+padding:32px;
+border-radius:24px;
+box-shadow:0 12px 35px rgba(26,65,120,.08);
+transition:.3s;
+border:1px solid transparent;
+height:100%;
+}
+
+.card:hover{
+transform:translateY(-8px);
+border-color:#dbe7ff;
+}
+
+.icon{
+width:64px;
+height:64px;
+border-radius:18px;
+background:#edf5ff;
+display:flex;
+justify-content:center;
+align-items:center;
+margin-bottom:22px;
+}
+
+.icon img{
+width:36px;
+height:36px;
+object-fit:contain;
+}
+
+.card h3{
+font-size:28px;
+margin-bottom:8px;
+}
+
+.sub{
+font-size:15px;
+color:#7c8fa4;
+margin-bottom:22px;
+}
+
+.value{
+font-size:22px;
+font-weight:700;
+color:#2563eb;
+word-break:break-word;
+}
+
+footer{
+padding:45px 0;
+text-align:center;
+color:#7b8ea3;
+}
+
+/* ---------- Tablet ---------- */
+
+@media (max-width:900px){
+
+nav{
+flex-direction:column;
+height:auto;
+padding:18px 0;
+}
+
+.menu{
+flex-wrap:wrap;
+justify-content:center;
+gap:18px;
+}
+
+.hero{
+padding:65px 0 45px;
+}
+
+h1{
+font-size:46px;
+}
+
+.hero p{
+font-size:18px;
+}
+
+}
+
+/* ---------- Mobile ---------- */
+
+@media (max-width:640px){
+
+.container{
+width:94%;
+}
+
+.logo{
+font-size:27px;
+}
+
+.menu{
+gap:14px;
+}
+
+.menu a{
+font-size:15px;
+}
+
+.hero{
+padding:50px 0 35px;
+}
+
+.badge{
+font-size:13px;
+}
+
+h1{
+font-size:34px;
+}
+
+.hero p{
+font-size:16px;
+line-height:1.7;
+}
+
+.grid{
+grid-template-columns:1fr;
+gap:22px;
+margin:40px 0 60px;
+}
+
+.card{
+padding:26px;
+}
+
+.card h3{
+font-size:24px;
+}
+
+.value{
+font-size:18px;
+}
+
+.icon{
+width:58px;
+height:58px;
+}
+
+.icon img{
+width:32px;
+height:32px;
+}
+
+}
+
 </style>
+
 </head>
+
 <body>
-<header><div class="container"><nav>
-<div class="logo">Acc<span>Station</span></div>
+
+<header>
+
+<div class="container">
+
+<nav>
+
+<div class="logo">
+Acc<span>Station</span>
+</div>
+
 <div class="menu">
 <a href="index.html">Home</a>
 <a href="contacts.html">Contacts</a>
 <a href="faq.html">FAQ</a>
 </div>
-</nav></div></header>
+
+</nav>
+
+</div>
+
+</header>
 
 <div class="container">
+
 <section class="hero">
-<div class="badge">Contact Information</div>
+
+<div class="badge">
+Contact Information
+</div>
+
 <h1>Get in Touch</h1>
-<p>Choose the most convenient way to contact us. Click any card to open the corresponding app or service.</p>
+
+<p>
+Choose the most convenient way to contact us.
+Click any card to open the corresponding service.
+</p>
+
 </section>
 
 <div class="grid">
 
-<a class="card" href="https://t.me/yourusername">
-<div class="icon"><img src="https://cdn.simpleicons.org/telegram"></div>
+<a class="card" href="https://t.me/yourusername" target="_blank">
+
+<div class="icon">
+<img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg">
+</div>
+
 <h3>Telegram</h3>
-<div class="sub">Fastest Response</div>
-<div class="value">@yourusername</div>
+
+<div class="sub">
+Fastest Response
+</div>
+
+<div class="value">
+@yourusername
+</div>
+
 </a>
 
 <a class="card" href="mailto:you@example.com">
-<div class="icon"><img src="https://cdn.simpleicons.org/gmail"></div>
+
+<div class="icon">
+<img src="https://cdn.simpleicons.org/gmail">
+</div>
+
 <h3>Gmail</h3>
-<div class="sub">Business Email</div>
-<div class="value">you@example.com</div>
+
+<div class="sub">
+Business Email
+</div>
+
+<div class="value">
+you@example.com
+</div>
+
 </a>
 
-<a class="card" href="https://x.com/yourusername">
-<div class="icon"><img src="https://cdn.simpleicons.org/x"></div>
+<a class="card" href="https://x.com/yourusername" target="_blank">
+
+<div class="icon">
+<img src="https://cdn.simpleicons.org/x">
+</div>
+
 <h3>X</h3>
-<div class="sub">News & Updates</div>
-<div class="value">@yourusername</div>
+
+<div class="sub">
+News & Updates
+</div>
+
+<div class="value">
+@yourusername
+</div>
+
 </a>
 
+<a class="card" href="https://instagram.com/yourusername" target="_blank">
 
-<a class="card" href="https://instagram.com/yourusername">
-<div class="icon"><img src="https://cdn.simpleicons.org/instagram"></div>
+<div class="icon">
+<img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png">
+</div>
+
 <h3>Instagram</h3>
-<div class="sub">Social Media</div>
-<div class="value">@yourusername</div>
+
+<div class="sub">
+Social Media
+</div>
+
+<div class="value">
+@yourusername
+</div>
+
 </a>
 
 </div>
 
 </div>
 
-<footer>© 2026 AccStation</footer>
+<footer>
+© 2026 AccStation
+</footer>
+
 </body>
 </html>
