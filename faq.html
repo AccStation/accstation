@@ -28,14 +28,42 @@ h1{font-size:58px;margin:18px 0}
 .question{display:flex;justify-content:space-between;align-items:center;padding:26px 30px;cursor:pointer;font-weight:700;font-size:20px}
 .icon{font-size:34px;color:#2563eb;transition:.3s}
 .answer{max-height:0;overflow:hidden;transition:max-height .35s ease,padding .35s ease;padding:0 30px;color:#667b92;line-height:1.8}
-.item.active .answer{max-height:220px;padding:0 30px 28px}
+.item.active .answer{max-height:600px;padding:0 30px 28px}
 .item.active .icon{transform:rotate(45deg)}
 .cta{margin:80px 0;background:#fff;border-radius:30px;padding:60px;text-align:center;box-shadow:0 12px 35px rgba(26,65,120,.08)}
 .cta h2{font-size:40px;margin-bottom:15px}
 .cta p{color:#6d8198;margin-bottom:30px}
 .btn{display:inline-block;background:#2563eb;color:#fff;text-decoration:none;padding:16px 28px;border-radius:14px;font-weight:700}
 footer{text-align:center;padding:45px;color:#789}
-@media(max-width:768px){nav{flex-direction:column;height:auto;padding:20px 0}.menu{flex-wrap:wrap}h1{font-size:42px}.question{font-size:18px}}
+@media (max-width:900px){
+.container{width:94%}
+nav{flex-direction:column;height:auto;padding:18px 0;gap:16px}
+.menu{flex-wrap:wrap;justify-content:center;gap:18px}
+.hero{padding:65px 0 45px}
+h1{font-size:46px}
+.hero p{font-size:18px}
+.question{font-size:18px}
+.cta{padding:45px 35px}
+.cta h2{font-size:34px}
+}
+@media (max-width:640px){
+.logo{font-size:27px}
+.menu{gap:14px}
+.menu a{font-size:15px}
+.hero{padding:50px 0 35px}
+.badge{font-size:13px;padding:8px 16px}
+h1{font-size:34px;line-height:1.15}
+.hero p{font-size:16px;line-height:1.7}
+.question{padding:20px;font-size:17px;align-items:flex-start;gap:12px}
+.icon{font-size:28px;flex-shrink:0}
+.answer{padding:0 20px;font-size:15px}
+.item.active .answer{padding:0 20px 20px;max-height:600px}
+.cta{margin:50px 0;padding:30px 20px;border-radius:22px}
+.cta h2{font-size:28px}
+.cta p{font-size:15px;line-height:1.7}
+.btn{display:block;width:100%;text-align:center}
+footer{padding:30px 0;font-size:14px}
+}
 </style>
 </head>
 <body>
