@@ -29,19 +29,19 @@ nav{display:flex;justify-content:space-between;align-items:center;height:80px}
 h1{font-size:64px;margin:20px 0}
 .hero p{max-width:720px;margin:auto;font-size:20px;color:#667b92;line-height:1.8}
 .btn{display:inline-block;margin-top:35px;padding:16px 34px;border-radius:14px;background:linear-gradient(135deg,#3b82f6,#2563eb);color:#fff;text-decoration:none;font-weight:700}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:28px;margin:60px 0 100px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:42px;margin:60px 0 100px}
 .card{height:450px;perspective:1200px}
 .card-inner{position:relative;width:100%;height:100%;transform-style:preserve-3d;transition:transform .75s}
 .card:hover .card-inner,.card.flipped .card-inner{transform:rotateY(180deg)}
 .card-front,.card-back{
-position:absolute;inset:0;background:#fff;border-radius:24px;padding:32px;
+position:absolute;inset:0;background:#fff;border-radius:24px;padding:38px 32px 32px;
 box-shadow:0 12px 35px rgba(26,65,120,.08);
 backface-visibility:hidden;display:flex;flex-direction:column
 }
 .card-front{transition:.25s}
 .card:hover .card-front{transform:translateY(-8px)}
 .card-back{transform:rotateY(180deg);background:#fff;color:#17324d}
-.icon{width:58px;height:58px;border-radius:16px;background:#edf5ff;display:flex;align-items:center;justify-content:center;margin-bottom:18px}
+.icon{width:58px;height:58px;border-radius:16px;background:#edf5ff;display:flex;align-items:center;justify-content:center;margin:10px 0 22px}
 .icon img{width:34px;height:34px;object-fit:contain}
 .icon img[src*="google"]{width:42px;height:42px}
 
@@ -55,7 +55,7 @@ li{padding:7px 0;color:#456}
 .price{margin:28px 0}
 .small{font-size:14px;color:#7d8ea2}
 .big{font-size:36px;font-weight:800;color:#2563eb}
-.flip{margin-top:auto;text-align:center;color:#8aa0b8;font-size:13px}
+.flip{margin-top:auto;text-align:center;color:#8aa0b8;font-size:13px;cursor:pointer}
 .order{display:block;text-align:center;padding:14px;border-radius:12px;background:#2563eb;color:#fff;text-decoration:none;font-weight:700;margin-top:auto}
 .card-back .order{background:#2563eb;color:#fff}
 section.info{background:#fff;border-radius:30px;padding:60px;box-shadow:0 12px 35px rgba(26,65,120,.08);margin-bottom:60px}
@@ -79,7 +79,7 @@ h1{font-size:44px}
 nav{flex-direction:column;height:auto;padding:20px 0}
 .menu{flex-wrap:wrap;justify-content:center;gap:16px}
 .hero{padding:60px 0 50px}
-.grid{grid-template-columns:1fr}
+.grid{grid-template-columns:1fr;gap:56px}
 .card{height:420px}
 section.info{padding:35px 20px}
 .features{grid-template-columns:1fr}
@@ -134,9 +134,15 @@ h1{font-size:34px}
 <footer>© 2026 AccStation</footer>
 <script>
 document.querySelectorAll('.card').forEach(card=>{
- card.addEventListener('click',e=>{
-   if(window.innerWidth<=992){card.classList.toggle('flipped');}
- });
+ const flip=card.querySelector('.flip');
+ if(flip){
+   flip.addEventListener('click',e=>{
+     if(window.innerWidth<=992){
+       e.stopPropagation();
+       card.classList.toggle('flipped');
+     }
+   });
+ }
 });
 </script>
 </body></html>
