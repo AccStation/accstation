@@ -52,10 +52,10 @@ backface-visibility:hidden;display:flex;flex-direction:column
 .card-back .sub,.card-back li,.card-back h3,.card-back .small{color:#456}
 ul{list-style:none}
 li{padding:7px 0;color:#456}
-.price{margin:28px 0}
+.price{margin-top:auto;padding-top:28px}
 .small{font-size:14px;color:#7d8ea2}
 .big{font-size:36px;font-weight:800;color:#2563eb}
-.flip{margin-top:auto;text-align:center;color:#8aa0b8;font-size:13px;cursor:pointer}
+.flip{margin-top:18px;text-align:center;color:#8aa0b8;font-size:13px;cursor:pointer}
 .order{display:block;text-align:center;padding:14px;border-radius:12px;background:#2563eb;color:#fff;text-decoration:none;font-weight:700;margin-top:auto}
 .card-back .order{background:#2563eb;color:#fff}
 section.info{background:#fff;border-radius:30px;padding:60px;box-shadow:0 12px 35px rgba(26,65,120,.08);margin-bottom:60px}
@@ -134,15 +134,10 @@ h1{font-size:34px}
 <footer>© 2026 AccStation</footer>
 <script>
 document.querySelectorAll('.card').forEach(card=>{
- const flip=card.querySelector('.flip');
- if(flip){
-   flip.addEventListener('click',e=>{
-     if(window.innerWidth<=992){
-       e.stopPropagation();
-       card.classList.toggle('flipped');
-     }
-   });
- }
+ card.addEventListener('click',e=>{
+   if(e.target.closest('a')) return;
+   card.classList.toggle('flipped');
+ });
 });
 </script>
 </body></html>
